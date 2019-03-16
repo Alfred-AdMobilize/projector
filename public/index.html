@@ -1,0 +1,123 @@
+<head>
+    <title>MATRIX TV Remote</title>
+    <link rel="shortcut icon" href="images/ever-loop.png" type="image/png"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<!--Users Connected Status-->
+<div id="users-connected">
+	<p id="users-connected-text">Users Connected:
+		<span id="users-connected-update">0</span>
+	</p>
+</div>
+<!--Navigation-->
+<ul id="navigation">
+	<li id="nav-item1" class="nav-item">Projector</li>
+	<li class="nav-slash">/</li>
+	<li id="nav-item2" class="nav-item">Lights</li>
+</ul>
+<!--Projector-->
+<div id="projector-layout" style="display:none">
+	<div class="control-wrapper">
+		<!--Projector On-->
+		<div id="projector-on" class="buttons noselect">
+		<p class="button-text">On</p>
+		</div>
+		<!--Projector Off-->
+		<div id="projector-off" class="buttons noselect">
+			<p class="button-text">Off</p>
+		</div>
+	</div>
+	<!-- <div class="control-wrapper"> -->
+		<!--Adjustment-->
+		<!-- <div>
+			<p class="button-text">Adjustment</p>
+		</div> -->
+	<!-- </div> -->
+	<div class="control-wrapper">
+		<!--Calibrate-->
+		<div id="projector-calibrate" class="buttons noselect" style="max-width: 80px;">
+			<p class="button-text" style="font-size: 28px;">Calibrate</p>
+		</div>
+	</div>
+	<div class="control-wrapper">
+		<!--Projector Up-->
+		<div id="projector-up" class="buttons noselect">
+			<p class="button-text" style="font-size: 28px;">Up</p>
+		</div>
+		<!--Projector In-->
+		<div id="projector-in" class="buttons noselect">
+			<p class="button-text" style="font-size: 28px;">In</p>
+		</div>
+	</div>
+	<div class="control-wrapper">
+		<!--Projector Down-->
+		<div id="projector-down" class="buttons noselect">
+			<p class="button-text" style="font-size: 28px;">Down</p>
+		</div>
+		<!--Projector Out-->
+		<div id="projector-out" class="buttons noselect">
+			<p class="button-text" style="font-size: 28px;">Out</p>
+		</div>
+	</div>
+	<div class="control-wrapper">
+		<!--Speaker On-->
+		<div id="speaker-on" class="buttons noselect" style="max-width: 80px;">
+			<p class="button-text" style="font-size: 28px;">Speaker</p>
+		</div>
+	</div>
+</div>
+<!--Lights-->
+<div id="lights-layout" style="display: none">
+	<div class="control-wrapper">
+		<!--Lights On-->
+		<div id="lights-on" class="buttons noselect">
+			<p class="button-text">On</p>
+		</div>
+		<!--Lights Off-->
+		<div id="lights-off" class="buttons noselect">
+			<p class="button-text">Off</p>
+		</div>
+	</div>
+	<div class="control-wrapper">
+		<!--Slider White-->
+		<div class="slidecontainer">
+			<input id="slider-white" type="range" min="0" max="255" value="0" class="slider">
+		  </div>
+	</div>
+	<div class="control-wrapper">
+		<!--Slider Red-->
+		<div class="slidecontainer">
+			<input id="slider-red" type="range" min="0" max="255" value="0" class="slider" style="background: #ff0000 !important;">
+		  </div>
+	</div>
+	<div class="control-wrapper">
+		<!--Slider Green-->
+		<div class="slidecontainer">
+			<input id="slider-green" type="range" min="0" max="255" value="0" class="slider" style="background: #00ff00 !important;">
+		  </div>
+	</div>
+	<div class="control-wrapper">
+		<!--Slider Blue-->
+		<div class="slidecontainer">
+			<input id="slider-blue" type="range" min="0" max="255" value="0" class="slider" style="background: #0000ff !important;">
+		  </div>
+	</div>
+	<div class="control-wrapper">
+		<!--Kitchen Lights On-->
+		<div id="kitchen-lights-on" class="buttons noselect">
+			<p class="button-text">On</p>
+		</div>
+		<!--Kitchen Lights Off-->
+		<div id="kitchen-lights-off" class="buttons noselect">
+			<p class="button-text">Off</p>
+		</div>
+	</div>
+</div>
+
+</body>
+
